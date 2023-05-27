@@ -1,0 +1,72 @@
+[gd_scene load_steps=6 format=3 uid="uid://bfkk8p6lsrev2"]
+
+[ext_resource type="Texture2D" uid="uid://cakda0awiqg48" path="res://art/background.png" id="1_1crmr"]
+[ext_resource type="PackedScene" uid="uid://d00satp53emni" path="res://src/UI/ChangeSceneButton.tscn" id="2_gbo6a"]
+[ext_resource type="PackedScene" uid="uid://doa1s8wlg0t5g" path="res://src/UI/QuitButton.tscn" id="3_lw2v8"]
+[ext_resource type="PackedScene" uid="uid://c8lh5dcu0aywg" path="res://src/UI/Title.tscn" id="4_epwa4"]
+[ext_resource type="FontFile" uid="uid://ceeykk6mg6p7e" path="res://art/montserrat_extrabold.otf" id="5_qswio"]
+
+[node name="EndScreen" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="background" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_1crmr")
+expand_mode = 1
+
+[node name="Menu" type="VBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -137.5
+offset_top = 75.0
+offset_right = 137.5
+offset_bottom = 283.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="PlayButton" parent="Menu" instance=ExtResource("2_gbo6a")]
+layout_mode = 2
+text = "Play again"
+next_scene_path = "res://src/UI/MainScreen.tscn"
+
+[node name="QuitButton" parent="Menu" instance=ExtResource("3_lw2v8")]
+layout_mode = 2
+
+[node name="Title" parent="." instance=ExtResource("4_epwa4")]
+layout_mode = 1
+offset_top = -174.686
+offset_bottom = 75.314
+text = "¡Congrats!
+You finished the game"
+
+[node name="ScoreLabel" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -160.5
+offset_top = -39.0
+offset_right = 160.5
+offset_bottom = 39.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("5_qswio")
+theme_override_font_sizes/font_size = 28
+text = "Your final score is %s.
+You died %s times."

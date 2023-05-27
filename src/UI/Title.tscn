@@ -1,0 +1,22 @@
+[gd_scene load_steps=2 format=3 uid="uid://c8lh5dcu0aywg"]
+
+[ext_resource type="FontFile" uid="uid://ceeykk6mg6p7e" path="res://art/montserrat_extrabold.otf" id="1_vb275"]
+
+[node name="Title" type="Label"]
+anchors_preset = -1
+anchor_left = 0.5
+anchor_top = 0.297
+anchor_right = 0.5
+anchor_bottom = 0.297
+offset_left = -308.765
+offset_top = -124.686
+offset_right = 309.235
+offset_bottom = 125.314
+grow_horizontal = 2
+theme_override_fonts/font = ExtResource("1_vb275")
+theme_override_font_sizes/font_size = 64
+text = "¡First 2D Platform Game!"
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 2
+metadata/_edit_vertical_guides_ = [576.603]

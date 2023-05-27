@@ -1,0 +1,48 @@
+[gd_scene load_steps=5 format=3 uid="uid://cutk0kxnsgy7s"]
+
+[ext_resource type="Texture2D" uid="uid://cakda0awiqg48" path="res://art/background.png" id="1_yltvx"]
+[ext_resource type="PackedScene" uid="uid://c8lh5dcu0aywg" path="res://src/UI/Title.tscn" id="2_1k688"]
+[ext_resource type="PackedScene" uid="uid://d00satp53emni" path="res://src/UI/ChangeSceneButton.tscn" id="3_60icx"]
+[ext_resource type="PackedScene" uid="uid://doa1s8wlg0t5g" path="res://src/UI/QuitButton.tscn" id="4_5qy3s"]
+
+[node name="MainScreen" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="background" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_yltvx")
+expand_mode = 1
+
+[node name="Title" parent="." instance=ExtResource("2_1k688")]
+layout_mode = 1
+
+[node name="Menu" type="VBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -129.0
+offset_top = 3.0
+offset_right = 129.0
+offset_bottom = 211.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="PlayButton" parent="Menu" instance=ExtResource("3_60icx")]
+layout_mode = 2
+next_scene_path = "res://src/Levels/Lvl01.tscn"
+
+[node name="QuitButton" parent="Menu" instance=ExtResource("4_5qy3s")]
+layout_mode = 2

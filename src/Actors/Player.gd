@@ -25,8 +25,12 @@ func _on_enemy_detector_area_entered(_area:Area2D):
 	velocity.y = JUMP_VELOCITY
 
 
-func _on_enemy_detector_body_entered(_body:Node2D):
+func die():
+	PlayerData.deaths += 1
 	queue_free()
+
+func _on_enemy_detector_body_entered(_body:Node2D):
+	die()
 
 func _physics_process(delta):
 	# Call parent's _physics_process.

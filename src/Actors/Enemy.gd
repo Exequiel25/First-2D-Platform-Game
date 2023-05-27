@@ -1,5 +1,6 @@
 extends "res://src/Actors/Actor.gd"
 
+@export var hit_score: int = 100
 
 const SPEED = 400.0
 var direction = Vector2.LEFT
@@ -12,6 +13,7 @@ func _on_stomp_detector_body_entered(body:Node2D):
 	# if it's hit from avobe
 	if body.position.y < position.y:
 		$CollisionShape2D.disabled = true
+		PlayerData.score += hit_score
 		queue_free()
 
 func _physics_process(delta):

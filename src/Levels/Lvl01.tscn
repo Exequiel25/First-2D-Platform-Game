@@ -1,14 +1,14 @@
-[gd_scene load_steps=9 format=3 uid="uid://bjryy6khf4qye"]
+[gd_scene load_steps=9 format=3 uid="uid://u3ls18q1ayr5"]
 
-[ext_resource type="Texture2D" uid="uid://dlqv54obfmsbx" path="res://art/tileset.png" id="1_ledao"]
-[ext_resource type="Texture2D" uid="uid://cakda0awiqg48" path="res://art/background.png" id="1_sj7uh"]
-[ext_resource type="PackedScene" uid="uid://cfhor4ukw8wbk" path="res://src/Actors/Player.tscn" id="2_kwwj4"]
-[ext_resource type="PackedScene" uid="uid://dkobq3tnl2f3k" path="res://src/Actors/Enemy.tscn" id="3_tlcff"]
-[ext_resource type="PackedScene" uid="uid://b85ce0ou6q7h6" path="res://src/Objects/Coin.tscn" id="5_5ummq"]
-[ext_resource type="PackedScene" uid="uid://bfbpaexfds035" path="res://src/Objects/Portal2D.tscn" id="6_fr50u"]
+[ext_resource type="Texture2D" uid="uid://cakda0awiqg48" path="res://art/background.png" id="1_saeos"]
+[ext_resource type="Texture2D" uid="uid://dlqv54obfmsbx" path="res://art/tileset.png" id="2_1or4j"]
+[ext_resource type="PackedScene" uid="uid://cfhor4ukw8wbk" path="res://src/Actors/Player.tscn" id="3_8j4aw"]
+[ext_resource type="PackedScene" uid="uid://dkobq3tnl2f3k" path="res://src/Actors/Enemy.tscn" id="4_j3rxf"]
+[ext_resource type="PackedScene" uid="uid://b85ce0ou6q7h6" path="res://src/Objects/Coin.tscn" id="5_0tcjf"]
+[ext_resource type="PackedScene" uid="uid://bfbpaexfds035" path="res://src/Objects/Portal2D.tscn" id="6_cp6ae"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_gk1b8"]
-texture = ExtResource("1_ledao")
+texture = ExtResource("2_1or4j")
 texture_region_size = Vector2i(80, 80)
 0:0/0 = 0
 0:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)
@@ -37,7 +37,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-texture = ExtResource("1_sj7uh")
+texture = ExtResource("1_saeos")
 expand_mode = 1
 
 [node name="TileMap" type="TileMap" parent="."]
@@ -46,44 +46,44 @@ cell_quadrant_size = 80
 format = 2
 layer_0/tile_data = PackedInt32Array(524288, 0, 0, 524289, 0, 0, 524290, 0, 0, 524291, 0, 0, 524292, 0, 0, 524293, 0, 0, 524294, 0, 0, 524295, 0, 0, 524296, 0, 0, 524297, 0, 0, 524298, 0, 0, 524299, 0, 0, 524300, 0, 0, 524301, 0, 0, 524302, 0, 0, 524303, 0, 0, 524304, 0, 0, 524305, 0, 0, 524306, 0, 0, 524307, 0, 0, 524308, 0, 0, 524309, 0, 0, 458758, 0, 0, 458760, 0, 0, 458759, 0, 0, 327689, 0, 0, 327690, 0, 0, 327691, 0, 0, 458752, 0, 0, 393216, 0, 0, 327680, 0, 0, 262144, 0, 0, 196608, 0, 0, 131072, 0, 0, 65536, 0, 0, 0, 0, 0, 458753, 0, 0, 393217, 0, 0, 327681, 0, 0, 524310, 0, 0, 524311, 0, 0, 524312, 0, 0, 524313, 0, 0, 524314, 0, 0, 524315, 0, 0, 524316, 0, 0, 524317, 0, 0, 524318, 0, 0, 524319, 0, 0, 524320, 0, 0, 524321, 0, 0, 524322, 0, 0, 524323, 0, 0, 524324, 0, 0, 458788, 0, 0, 393252, 0, 0, 327716, 0, 0, 262180, 0, 0, 196644, 0, 0, 131108, 0, 0, 65572, 0, 0, 36, 0, 0, 458768, 0, 0, 458769, 0, 0, 327698, 0, 0, 327699, 0, 0, 458777, 0, 0, 393241, 0, 0, 327703, 0, 0, 327704, 0, 0)
 
-[node name="Player" parent="." instance=ExtResource("2_kwwj4")]
+[node name="Player" parent="." instance=ExtResource("3_8j4aw")]
 position = Vector2(313.378, 479.156)
 
 [node name="Camera2D" parent="Player" index="2"]
 limit_right = 2960
 limit_bottom = 720
 
-[node name="Enemy" parent="." instance=ExtResource("3_tlcff")]
+[node name="Enemy" parent="." instance=ExtResource("4_j3rxf")]
 position = Vector2(1032.21, 612.3)
 
-[node name="Enemy2" parent="." instance=ExtResource("3_tlcff")]
+[node name="Enemy2" parent="." instance=ExtResource("4_j3rxf")]
 position = Vector2(1723.8, 612.3)
 
-[node name="Enemy3" parent="." instance=ExtResource("3_tlcff")]
+[node name="Enemy3" parent="." instance=ExtResource("4_j3rxf")]
 position = Vector2(2549.93, 612.3)
 
-[node name="Coin" parent="." instance=ExtResource("5_5ummq")]
+[node name="Coin" parent="." instance=ExtResource("5_0tcjf")]
 position = Vector2(531.85, 517.018)
 
-[node name="Coin2" parent="." instance=ExtResource("5_5ummq")]
+[node name="Coin2" parent="." instance=ExtResource("5_0tcjf")]
 position = Vector2(591.541, 517.018)
 
-[node name="Coin3" parent="." instance=ExtResource("5_5ummq")]
+[node name="Coin3" parent="." instance=ExtResource("5_0tcjf")]
 position = Vector2(645.885, 517.018)
 
-[node name="Coin4" parent="." instance=ExtResource("5_5ummq")]
+[node name="Coin4" parent="." instance=ExtResource("5_0tcjf")]
 position = Vector2(1097.57, 621.25)
 
-[node name="Coin5" parent="." instance=ExtResource("5_5ummq")]
+[node name="Coin5" parent="." instance=ExtResource("5_0tcjf")]
 position = Vector2(1526.09, 379.618)
 
-[node name="Coin6" parent="." instance=ExtResource("5_5ummq")]
+[node name="Coin6" parent="." instance=ExtResource("5_0tcjf")]
 position = Vector2(1819.63, 612.3)
 
-[node name="Coin7" parent="." instance=ExtResource("5_5ummq")]
+[node name="Coin7" parent="." instance=ExtResource("5_0tcjf")]
 position = Vector2(1602.54, 612.3)
 
-[node name="Portal2D" parent="." instance=ExtResource("6_fr50u")]
+[node name="Portal2D" parent="." instance=ExtResource("6_cp6ae")]
 position = Vector2(417.428, 541.268)
 next_scene_path = "res://src/Levels/Lvl02.tscn"
 
