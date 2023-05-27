@@ -1,9 +1,10 @@
-[gd_scene load_steps=7 format=3 uid="uid://bjryy6khf4qye"]
+[gd_scene load_steps=8 format=3 uid="uid://bjryy6khf4qye"]
 
 [ext_resource type="Texture2D" uid="uid://dlqv54obfmsbx" path="res://art/tileset.png" id="1_ledao"]
 [ext_resource type="Texture2D" uid="uid://cakda0awiqg48" path="res://art/background.png" id="1_sj7uh"]
 [ext_resource type="PackedScene" uid="uid://cfhor4ukw8wbk" path="res://src/Actors/Player.tscn" id="2_kwwj4"]
 [ext_resource type="PackedScene" uid="uid://dkobq3tnl2f3k" path="res://src/Actors/Enemy.tscn" id="3_tlcff"]
+[ext_resource type="PackedScene" uid="uid://b85ce0ou6q7h6" path="res://src/Objects/Coin.tscn" id="5_5ummq"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_gk1b8"]
 texture = ExtResource("1_ledao")
@@ -59,5 +60,26 @@ position = Vector2(1723.8, 612.3)
 
 [node name="Enemy3" parent="." instance=ExtResource("3_tlcff")]
 position = Vector2(2549.93, 612.3)
+
+[node name="Coin" parent="." instance=ExtResource("5_5ummq")]
+position = Vector2(531.85, 517.018)
+
+[node name="Coin2" parent="." instance=ExtResource("5_5ummq")]
+position = Vector2(591.541, 517.018)
+
+[node name="Coin3" parent="." instance=ExtResource("5_5ummq")]
+position = Vector2(645.885, 517.018)
+
+[node name="Coin4" parent="." instance=ExtResource("5_5ummq")]
+position = Vector2(1097.57, 621.25)
+
+[node name="Coin5" parent="." instance=ExtResource("5_5ummq")]
+position = Vector2(1526.09, 379.618)
+
+[node name="Coin6" parent="." instance=ExtResource("5_5ummq")]
+position = Vector2(1819.63, 612.3)
+
+[node name="Coin7" parent="." instance=ExtResource("5_5ummq")]
+position = Vector2(1602.54, 612.3)
 
 [editable path="Player"]

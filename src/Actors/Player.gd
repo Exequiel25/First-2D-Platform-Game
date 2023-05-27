@@ -20,12 +20,12 @@ func get_input():
 		velocity.x = move_toward(velocity.x, 0, SPEED)
 
 
-func _on_enemy_detector_area_entered(area:Area2D):
+func _on_enemy_detector_area_entered(_area:Area2D):
 	# bounce when enemy is hit
 	velocity.y = JUMP_VELOCITY
 
 
-func _on_enemy_detector_body_entered(body:Node2D):
+func _on_enemy_detector_body_entered(_body:Node2D):
 	queue_free()
 
 func _physics_process(delta):

@@ -7,7 +7,7 @@
 size = Vector2(106.667, 63.1667)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ry3rx"]
-size = Vector2(133.333, 30.7292)
+size = Vector2(92.5, 30.7292)
 
 [node name="Enemy" type="CharacterBody2D"]
 scale = Vector2(0.6, 0.6)
@@ -19,11 +19,11 @@ script = ExtResource("1_3ekll")
 texture = ExtResource("2_25l6t")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(1.98682e-07, 14.9167)
+position = Vector2(5.96046e-07, 14.9167)
 shape = SubResource("RectangleShape2D_h8d48")
 
 [node name="VisibleOnScreenEnabler2D" type="VisibleOnScreenEnabler2D" parent="."]
-position = Vector2(0, 18.5)
+position = Vector2(0, 15)
 scale = Vector2(5.4, 2.85)
 
 [node name="StompDetector" type="Area2D" parent="."]
@@ -31,7 +31,7 @@ modulate = Color(0, 0, 1, 1)
 collision_layer = 2
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StompDetector"]
-position = Vector2(0, -32.0312)
+position = Vector2(0, -31.6667)
 shape = SubResource("RectangleShape2D_ry3rx")
 
 [connection signal="body_entered" from="StompDetector" to="." method="_on_stomp_detector_body_entered"]
