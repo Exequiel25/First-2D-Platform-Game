@@ -1,10 +1,12 @@
-[gd_scene load_steps=8 format=3 uid="uid://bjryy6khf4qye"]
+[gd_scene load_steps=10 format=3 uid="uid://bjryy6khf4qye"]
 
 [ext_resource type="Texture2D" uid="uid://dlqv54obfmsbx" path="res://art/tileset.png" id="1_ledao"]
 [ext_resource type="Texture2D" uid="uid://cakda0awiqg48" path="res://art/background.png" id="1_sj7uh"]
 [ext_resource type="PackedScene" uid="uid://cfhor4ukw8wbk" path="res://src/Actors/Player.tscn" id="2_kwwj4"]
 [ext_resource type="PackedScene" uid="uid://dkobq3tnl2f3k" path="res://src/Actors/Enemy.tscn" id="3_tlcff"]
 [ext_resource type="PackedScene" uid="uid://b85ce0ou6q7h6" path="res://src/Objects/Coin.tscn" id="5_5ummq"]
+[ext_resource type="PackedScene" uid="uid://bfbpaexfds035" path="res://src/Objects/Portal2D.tscn" id="6_fr50u"]
+[ext_resource type="PackedScene" uid="uid://buyndhrl5detr" path="res://src/Levels/Lvl02.tscn" id="7_e4035"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_gk1b8"]
 texture = ExtResource("1_ledao")
@@ -81,5 +83,9 @@ position = Vector2(1819.63, 612.3)
 
 [node name="Coin7" parent="." instance=ExtResource("5_5ummq")]
 position = Vector2(1602.54, 612.3)
+
+[node name="Portal2D" parent="." instance=ExtResource("6_fr50u")]
+position = Vector2(417.428, 541.268)
+next_scene = ExtResource("7_e4035")
 
 [editable path="Player"]
