@@ -40,7 +40,7 @@ offset_bottom = 211.0
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="PlayButton" parent="Menu" instance=ExtResource("3_60icx")]
+[node name="ChangeSceneButton" parent="Menu" instance=ExtResource("3_60icx")]
 layout_mode = 2
 next_scene_path = "res://src/Levels/Lvl01.tscn"
 

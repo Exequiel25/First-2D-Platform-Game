@@ -1,0 +1,77 @@
+[gd_scene load_steps=7 format=3 uid="uid://cyg73ko85q2sk"]
+
+[ext_resource type="Script" path="res://src/UI/UserInterface.gd" id="1_d86pi"]
+[ext_resource type="FontFile" uid="uid://ceeykk6mg6p7e" path="res://art/montserrat_extrabold.otf" id="1_hiwj4"]
+[ext_resource type="PackedScene" uid="uid://c8lh5dcu0aywg" path="res://src/UI/Title.tscn" id="2_ywvgn"]
+[ext_resource type="PackedScene" uid="uid://d00satp53emni" path="res://src/UI/ChangeSceneButton.tscn" id="3_1xiqb"]
+[ext_resource type="PackedScene" uid="uid://cokch5vuaj1mq" path="res://src/UI/RetryButton.tscn" id="3_50plg"]
+[ext_resource type="PackedScene" uid="uid://doa1s8wlg0t5g" path="res://src/UI/QuitButton.tscn" id="4_j45l8"]
+
+[node name="UserInterface" type="Control"]
+process_mode = 3
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_d86pi")
+
+[node name="ScoreLabel" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -73.0
+offset_bottom = 26.0
+grow_horizontal = 0
+theme_override_fonts/font = ExtResource("1_hiwj4")
+theme_override_font_sizes/font_size = 21
+text = "Score: %s"
+
+[node name="PauseOverlay" type="ColorRect" parent="."]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 0.243137)
+
+[node name="Title" parent="PauseOverlay" instance=ExtResource("2_ywvgn")]
+layout_mode = 1
+anchors_preset = 8
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_left = -309.0
+offset_top = -252.0
+offset_right = 309.0
+offset_bottom = -2.0
+grow_vertical = 2
+text = "Pause"
+
+[node name="Menu" type="VBoxContainer" parent="PauseOverlay"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -129.0
+offset_top = 3.0
+offset_right = 129.0
+offset_bottom = 211.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="RetryButton" parent="PauseOverlay/Menu" instance=ExtResource("3_50plg")]
+layout_mode = 2
+
+[node name="ChangeSceneButton" parent="PauseOverlay/Menu" instance=ExtResource("3_1xiqb")]
+layout_mode = 2
+text = "Main screen"
+next_scene_path = "res://src/UI/MainScreen.tscn"
+
+[node name="QuitButton" parent="PauseOverlay/Menu" instance=ExtResource("4_j45l8")]
+layout_mode = 2

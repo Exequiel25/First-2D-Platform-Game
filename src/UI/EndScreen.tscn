@@ -1,6 +1,7 @@
-[gd_scene load_steps=6 format=3 uid="uid://bfkk8p6lsrev2"]
+[gd_scene load_steps=7 format=3 uid="uid://bfkk8p6lsrev2"]
 
 [ext_resource type="Texture2D" uid="uid://cakda0awiqg48" path="res://art/background.png" id="1_1crmr"]
+[ext_resource type="Script" path="res://src/UI/EndScreen.gd" id="1_ctkgf"]
 [ext_resource type="PackedScene" uid="uid://d00satp53emni" path="res://src/UI/ChangeSceneButton.tscn" id="2_gbo6a"]
 [ext_resource type="PackedScene" uid="uid://doa1s8wlg0t5g" path="res://src/UI/QuitButton.tscn" id="3_lw2v8"]
 [ext_resource type="PackedScene" uid="uid://c8lh5dcu0aywg" path="res://src/UI/Title.tscn" id="4_epwa4"]
@@ -13,6 +14,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+script = ExtResource("1_ctkgf")
 
 [node name="background" type="TextureRect" parent="."]
 layout_mode = 1
@@ -70,3 +72,5 @@ theme_override_fonts/font = ExtResource("5_qswio")
 theme_override_font_sizes/font_size = 28
 text = "Your final score is %s.
 You died %s times."
+horizontal_alignment = 1
+vertical_alignment = 1

@@ -7,7 +7,7 @@
 size = Vector2(93.3333, 92.3376)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_8jwds"]
-size = Vector2(95.9991, 97.1155)
+size = Vector2(95.9991, 97.2158)
 
 [node name="Player" type="CharacterBody2D"]
 scale = Vector2(0.6, 0.6)
@@ -42,7 +42,7 @@ monitorable = false
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="EnemyDetector"]
 modulate = Color(0.784314, 0, 1, 1)
-position = Vector2(0.0178012, 0.609047)
+position = Vector2(0.0178012, 0.659184)
 shape = SubResource("RectangleShape2D_8jwds")
 
 [connection signal="area_entered" from="EnemyDetector" to="." method="_on_enemy_detector_area_entered"]

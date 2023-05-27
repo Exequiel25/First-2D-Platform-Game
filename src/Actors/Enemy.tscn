@@ -7,7 +7,7 @@
 size = Vector2(106.667, 63.1667)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ry3rx"]
-size = Vector2(92.5, 30.7292)
+size = Vector2(96.6667, 33.6979)
 
 [node name="Enemy" type="CharacterBody2D"]
 scale = Vector2(0.6, 0.6)
@@ -31,7 +31,8 @@ modulate = Color(0, 0, 1, 1)
 collision_layer = 2
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StompDetector"]
-position = Vector2(0, -31.6667)
+position = Vector2(-1.66667, -33.1511)
 shape = SubResource("RectangleShape2D_ry3rx")
 
+[connection signal="area_entered" from="StompDetector" to="." method="_on_stomp_detector_area_entered"]
 [connection signal="body_entered" from="StompDetector" to="." method="_on_stomp_detector_body_entered"]

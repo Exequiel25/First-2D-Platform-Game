@@ -1,6 +1,7 @@
-[gd_scene load_steps=9 format=3 uid="uid://bjryy6khf4qye"]
+[gd_scene load_steps=10 format=3 uid="uid://bjryy6khf4qye"]
 
 [ext_resource type="Texture2D" uid="uid://dlqv54obfmsbx" path="res://art/tileset.png" id="1_ledao"]
+[ext_resource type="PackedScene" uid="uid://cyg73ko85q2sk" path="res://src/UI/UserInterface.tscn" id="1_lsiej"]
 [ext_resource type="Texture2D" uid="uid://cakda0awiqg48" path="res://art/background.png" id="1_sj7uh"]
 [ext_resource type="PackedScene" uid="uid://cfhor4ukw8wbk" path="res://src/Actors/Player.tscn" id="2_kwwj4"]
 [ext_resource type="PackedScene" uid="uid://dkobq3tnl2f3k" path="res://src/Actors/Enemy.tscn" id="3_tlcff"]
@@ -28,10 +29,15 @@ sources/0 = SubResource("TileSetAtlasSource_gk1b8")
 metadata/_edit_vertical_guides_ = [2960.05]
 metadata/_edit_horizontal_guides_ = [720.18]
 
-[node name="CanvasLayer" type="CanvasLayer" parent="."]
+[node name="UICanvasLayer" type="CanvasLayer" parent="."]
+layer = 100
+
+[node name="UserInterface" parent="UICanvasLayer" instance=ExtResource("1_lsiej")]
+
+[node name="BackgroundCanvasLayer" type="CanvasLayer" parent="."]
 layer = -100
 
-[node name="background" type="TextureRect" parent="CanvasLayer"]
+[node name="background" type="TextureRect" parent="BackgroundCanvasLayer"]
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
@@ -84,7 +90,7 @@ position = Vector2(1819.63, 612.3)
 position = Vector2(1602.54, 612.3)
 
 [node name="Portal2D" parent="." instance=ExtResource("6_fr50u")]
-position = Vector2(417.428, 541.268)
+position = Vector2(834.857, 204.359)
 next_scene_path = "res://src/Levels/Lvl02.tscn"
 
 [editable path="Player"]

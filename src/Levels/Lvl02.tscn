@@ -1,10 +1,11 @@
-[gd_scene load_steps=8 format=3 uid="uid://buyndhrl5detr"]
+[gd_scene load_steps=9 format=3 uid="uid://buyndhrl5detr"]
 
 [ext_resource type="Texture2D" uid="uid://cakda0awiqg48" path="res://art/background.png" id="1_8kiff"]
 [ext_resource type="Texture2D" uid="uid://dlqv54obfmsbx" path="res://art/tileset.png" id="2_3fqnb"]
 [ext_resource type="PackedScene" uid="uid://cfhor4ukw8wbk" path="res://src/Actors/Player.tscn" id="3_18tlg"]
 [ext_resource type="PackedScene" uid="uid://dkobq3tnl2f3k" path="res://src/Actors/Enemy.tscn" id="4_ilgeu"]
 [ext_resource type="PackedScene" uid="uid://b85ce0ou6q7h6" path="res://src/Objects/Coin.tscn" id="5_o5xcu"]
+[ext_resource type="PackedScene" uid="uid://bfbpaexfds035" path="res://src/Objects/Portal2D.tscn" id="6_06ucu"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_gk1b8"]
 texture = ExtResource("2_3fqnb")
@@ -81,5 +82,9 @@ position = Vector2(1819.63, 612.3)
 
 [node name="Coin7" parent="." instance=ExtResource("5_o5xcu")]
 position = Vector2(1602.54, 612.3)
+
+[node name="Portal2D" parent="." instance=ExtResource("6_06ucu")]
+position = Vector2(158.75, 231.826)
+next_scene_path = "res://src/UI/EndScreen.tscn"
 
 [editable path="Player"]
