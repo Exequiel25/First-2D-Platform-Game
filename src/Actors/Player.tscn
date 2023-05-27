@@ -1,0 +1,48 @@
+[gd_scene load_steps=5 format=3 uid="uid://cfhor4ukw8wbk"]
+
+[ext_resource type="Script" path="res://src/Actors/Player.gd" id="1_jnm11"]
+[ext_resource type="Texture2D" uid="uid://di77jcnmstimp" path="res://art/player.png" id="1_opaal"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_h8d48"]
+size = Vector2(86.6667, 88)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_8jwds"]
+size = Vector2(93.3333, 90)
+
+[node name="Player" type="CharacterBody2D"]
+scale = Vector2(0.6, 0.6)
+collision_mask = 8
+script = ExtResource("1_jnm11")
+metadata/_edit_group_ = true
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(0, -48.3333)
+texture = ExtResource("1_opaal")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, -48.333)
+shape = SubResource("RectangleShape2D_h8d48")
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(0, -48.333)
+limit_left = 0
+limit_top = 0
+limit_smoothed = true
+position_smoothing_enabled = true
+position_smoothing_speed = 6.0
+drag_horizontal_enabled = true
+drag_vertical_enabled = true
+drag_left_margin = 0.0
+drag_right_margin = 0.0
+
+[node name="EnemyDetector" type="Area2D" parent="."]
+position = Vector2(0, -48.333)
+collision_mask = 2
+monitorable = false
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="EnemyDetector"]
+modulate = Color(0.784314, 0, 1, 1)
+shape = SubResource("RectangleShape2D_8jwds")
+
+[connection signal="area_entered" from="EnemyDetector" to="." method="_on_enemy_detector_area_entered"]
+[connection signal="body_entered" from="EnemyDetector" to="." method="_on_enemy_detector_body_entered"]
